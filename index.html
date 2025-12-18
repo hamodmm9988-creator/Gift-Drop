@@ -14,19 +14,19 @@
 
     .container {
       max-width: 600px;
-      margin: 60px auto;
+      margin: 80px auto;
       padding: 20px;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 10px;
       color: #000;
     }
 
     p {
       color: #555;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .warning {
@@ -57,19 +57,43 @@
     button:hover {
       background-color: #d32f2f;
     }
+
+    .success {
+      text-align: center;
+    }
+
+    .success h1 {
+      color: #2e7d32;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <!-- Delete Form -->
+  <div class="container" id="deleteForm">
     <h1>Remove Account</h1>
     <p>Are you sure you want to remove your account?</p>
     <p class="warning">This action cannot be undone.</p>
 
-    <form method="POST" action="#">
-      <input type="text" name="user_id" placeholder="User ID" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <button type="submit">Remove Account</button>
-    </form>
+    <input type="text" placeholder="User ID" required />
+    <input type="email" placeholder="Email Address" required />
+
+    <button onclick="deleteAccount()">Remove Account</button>
   </div>
+
+  <!-- Success Message -->
+  <div class="container success" id="successMessage" style="display:none;">
+    <h1>Account Deletion Request Submitted</h1>
+    <p>Your account deletion request has been received successfully.</p>
+    <p>Your data will be permanently deleted in accordance with our Privacy Policy.</p>
+  </div>
+
+  <script>
+    function deleteAccount() {
+      document.getElementById("deleteForm").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    }
+  </script>
+
 </body>
 </html>

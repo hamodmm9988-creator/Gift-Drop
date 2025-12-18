@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remove Account</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .warning {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #e53935;
+      color: #fff;
+      border: none;
+      padding: 14px 22px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Remove Account</h1>
+    <p>Are you sure you want to remove your account?</p>
+    <p class="warning">This action cannot be undone.</p>
+
+    <form method="POST" action="#">
+      <input type="text" name="user_id" placeholder="User ID" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <button type="submit">Remove Account</button>
+    </form>
+  </div>
+</body>
+</html>
